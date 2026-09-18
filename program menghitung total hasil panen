@@ -26,3 +26,11 @@ def main():
     total = hitung_total_panen(hasil_panen)
     print(f"Data hasil panen per petak: {hasil_panen}")
     print(f"Total hasil panen: {total} kg")
+
+harga_per_kg = 5000
+    persen_diskon = 10
+    harga_akhir = hitung_harga_setelah_diskon(total, harga_per_kg, persen_diskon)
+    print(f"Harga jual setelah diskon {persen_diskon}%: Rp{harga_akhir:,.0f}")
+
+if __name__ == "__main__":
+    main()
