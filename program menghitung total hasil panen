@@ -8,3 +8,21 @@ def hitung_total_panen(daftar_panen):
     daftar_panen: list berisi angka hasil panen, misal [120, 85, 200]
     """
     return sum(daftar_panen)
+
+def hitung_harga_setelah_diskon(total_kg, harga_per_kg, persen_diskon):
+    """
+    Menghitung total harga jual setelah diskon.
+    total_kg: total hasil panen (kg)
+    harga_per_kg: harga jual per kg sebelum diskon
+    persen_diskon: besar diskon dalam persen, misal 10 untuk 10%
+    """
+    harga_awal = total_kg * harga_per_kg
+    potongan = harga_awal * (persen_diskon / 100)
+    return harga_awal - potongan
+
+
+def main():
+    hasil_panen = [120, 85, 200, 150]  # hasil panen per petak (kg)
+    total = hitung_total_panen(hasil_panen)
+    print(f"Data hasil panen per petak: {hasil_panen}")
+    print(f"Total hasil panen: {total} kg")
