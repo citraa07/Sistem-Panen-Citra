@@ -1,0 +1,10 @@
+"""
+Program Penghitung Total Hasil Panen
+"""
+
+def hitung_total_panen(daftar_panen):
+    """
+    Menghitung total hasil panen (dalam kg) dari beberapa petak/hari panen.
+    daftar_panen: list berisi angka hasil panen, misal [120, 85, 200]
+    """
+    return sum(daftar_panen)
